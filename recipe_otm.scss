@@ -24,6 +24,7 @@ body {
         display: flex;
         column-gap: 30px;
         margin: 0 30px;
+
         a {
             color: black;
             text-decoration: none;
@@ -34,50 +35,58 @@ body {
 
 // Main
 main {
-    .food-menu {
+    min-height: 300px;
+    .bar {
+        height: 20px;
         background-color: var.$dark-background-color;
         padding: 4px;
-        display: flex;
-        text-align: center;
-        justify-content: space-around;
-        color: white;
-        font-size: small;
-        text-transform: uppercase;
     }
     .container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
         margin: 10px 40px;
-        .food-container {
-            position: relative;
-            img {
-                width: 100%;
-                height: 100%;
+        .hero {
+            h2 {
+                padding-bottom: 10px;
             }
-            div {
-                position: absolute;
-                bottom: 0;
-                background-color: rgb(193, 197, 201, 0.7);
-                width: 100%;
-                padding: 10px 0;
-                text-align: center;
-                font-size: small;
-                text-transform: uppercase;
-                color: whitesmoke;
+            .pic-recipe-otm {
+                height: 300px;
+                background-color: antiquewhite;
+                background-image: url("./recipe_otm.png");
+                background-size: cover;
+                background-position: center;
+                position: relative;
             }
         }
-    }
-    // Media queries
-    @media screen and (max-width: 481px) {
-        .container {
-            grid-template-columns: repeat(1, 1fr);
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            h3 {
+                color: var.$green-color;
+                padding: 5px 10px;
+            }
+            .ingredients {
+                td, th {
+                    padding: 0 5px;
+                }
+                .amount {
+                    width: 200px;
+                    text-align: right;
+                }
+                .ingredient {
+                    width: 200px;
+                    text-align: left;
+        
+                }
+            }
         }
-    }
-    // Tablet
-    @media screen and (min-width: 481px) and (max-width: 1024px) {
-        .container {
-            grid-template-columns: repeat(2, 1fr);
+        .preperation {
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            list-style-position: inside;
         }
     }
 }
@@ -96,10 +105,12 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
+
         a {
             text-decoration: none;
             color: white;
         }
+
         div {
             margin: 0 10px;
             ;

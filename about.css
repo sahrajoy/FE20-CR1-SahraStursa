@@ -32,52 +32,38 @@ body {
   font-size: medium;
 }
 
-main .food-menu {
+main {
+  min-height: 350px;
+}
+main .bar {
+  height: 20px;
   background-color: #293133;
   padding: 4px;
-  display: flex;
-  text-align: center;
-  justify-content: space-around;
-  color: white;
-  font-size: small;
-  text-transform: uppercase;
 }
 main .container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
   margin: 10px 40px;
 }
-main .container .food-container {
-  position: relative;
+main .container .about {
+  padding: 30px;
 }
-main .container .food-container img {
-  width: 100%;
-  height: 100%;
+main .container .about .image {
+  float: left;
+  height: 15rem;
+  width: 20rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  background-color: aliceblue;
+  background-image: url("https://media.istockphoto.com/id/974660508/de/foto/frau-stand-zur%C3%BCck-zu-freund.jpg?s=612x612&w=0&k=20&c=ywlVe9tOYoTQ7hxzNZjGy7VOiDL_acH5G_aOdVCWB7Y=");
+  background-size: cover;
+  background-position: center;
 }
-main .container .food-container div {
-  position: absolute;
-  bottom: 0;
-  background-color: rgba(193, 197, 201, 0.7);
-  width: 100%;
-  padding: 10px 0;
-  text-align: center;
-  font-size: small;
-  text-transform: uppercase;
-  color: whitesmoke;
-}
-@media screen and (max-width: 481px) {
-  main .container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 1024px) {
-  main .container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+main .container .about h3 {
+  color: #74B72E;
 }
 
 footer {
+  position: sticky;
+  bottom: 0;
   background-color: #293133;
   display: flex;
   justify-content: center;
@@ -108,4 +94,4 @@ footer .social-tags .fa {
   margin: 5px 5px;
   font-size: 20px;
   color: white;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=about.css.map */

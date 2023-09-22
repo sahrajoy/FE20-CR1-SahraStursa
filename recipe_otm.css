@@ -32,49 +32,56 @@ body {
   font-size: medium;
 }
 
-main .food-menu {
+main {
+  min-height: 300px;
+}
+main .bar {
+  height: 20px;
   background-color: #293133;
   padding: 4px;
-  display: flex;
-  text-align: center;
-  justify-content: space-around;
-  color: white;
-  font-size: small;
-  text-transform: uppercase;
 }
 main .container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
   margin: 10px 40px;
 }
-main .container .food-container {
+main .container .hero h2 {
+  padding-bottom: 10px;
+}
+main .container .hero .pic-recipe-otm {
+  height: 300px;
+  background-color: antiquewhite;
+  background-image: url("./recipe_otm.png");
+  background-size: cover;
+  background-position: center;
   position: relative;
 }
-main .container .food-container img {
-  width: 100%;
-  height: 100%;
+main .container .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-main .container .food-container div {
-  position: absolute;
-  bottom: 0;
-  background-color: rgba(193, 197, 201, 0.7);
-  width: 100%;
-  padding: 10px 0;
-  text-align: center;
-  font-size: small;
-  text-transform: uppercase;
-  color: whitesmoke;
+main .container .content h3 {
+  color: #74B72E;
+  padding: 5px 10px;
 }
-@media screen and (max-width: 481px) {
-  main .container {
-    grid-template-columns: repeat(1, 1fr);
-  }
+main .container .content .ingredients td, main .container .content .ingredients th {
+  padding: 0 5px;
 }
-@media screen and (min-width: 481px) and (max-width: 1024px) {
-  main .container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+main .container .content .ingredients .amount {
+  width: 200px;
+  text-align: right;
+}
+main .container .content .ingredients .ingredient {
+  width: 200px;
+  text-align: left;
+}
+main .container .preperation {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  list-style-position: inside;
 }
 
 footer {
@@ -108,4 +115,4 @@ footer .social-tags .fa {
   margin: 5px 5px;
   font-size: 20px;
   color: white;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=recipe_otm.css.map */
